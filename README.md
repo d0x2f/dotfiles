@@ -1,6 +1,6 @@
 # Personal Dotfiles
 
-OS: Arch Linx
+OS: Arch Linux
 
 WM: i3
 
