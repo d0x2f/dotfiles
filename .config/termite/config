@@ -1,0 +1,7 @@
+
+[options]
+font = Hack 12
+
+[colors]
+foreground = #586e75
+background = #fdf6e3

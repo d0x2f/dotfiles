@@ -1,12 +1,12 @@
 # Personal Dotfiles
 
-OS: Arch Linux
+OS: Arch Linux <3.
 
-WM: i3
+WM: i3 w/ gaps, rofi, i3bar & i3status.
 
-Bar: Polybar
+Shell: fish with [bobthefish theme](https://github.com/oh-my-fish/theme-bobthefish).
 
-Shell: fish with [bobthefish theme](https://github.com/oh-my-fish/theme-bobthefish)
+Extras: VSCode, gtk3, termite & httpie.
 
 # Screenshot
 

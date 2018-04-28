@@ -1,0 +1,74 @@
+general {
+	colors = true
+	color_good = "#586e75"
+	color_bad = "#dc322f"
+	color_degraded = "#b58900"
+	interval = 2
+}
+
+order += "volume master"
+order += "load"
+order += "cpu_usage"
+order += "ethernet enp11s0"
+order += "tztime local"
+
+volume master {
+	format = " ♪ %volume  "
+	device = "default"
+	mixer = "Master"
+	mixer_idx = 0
+}
+
+load {
+	format = " Δ %1min "
+}
+
+cpu_usage {
+	format = " %usage "
+}
+
+cpu_temperature 0 {
+	format = " ± %degrees°"
+	path = "/sys/devices/platform/coretemp.0/temp2_input"
+	max_threshold = 95
+}
+
+cpu_temperature 1 {
+	format = "%degrees°"
+	path = "/sys/devices/platform/coretemp.0/temp3_input"
+	max_threshold = 95
+}
+
+cpu_temperature 2 {
+	format = "%degrees°"
+	path = "/sys/devices/platform/coretemp.0/temp4_input"
+	max_threshold = 95
+}
+
+cpu_temperature 3 {
+	format = "%degrees° "
+	path = "/sys/devices/platform/coretemp.0/temp5_input"
+	max_threshold = 95
+}
+
+disk "/" {
+	format = " ¨ %avail:/ "
+}
+
+disk "/media/media" {
+	format = " ¨ %avail:m "
+}
+
+wireless wlan0 {
+	format_up = " W: (%quality at %essid) %ip "
+	format_down = " ☡ WiFi "
+}
+
+ethernet enp11s0 {
+	format_up =  " Ω: %ip  "
+	format_down = " ∅ enp11s0  "
+}
+
+tztime local {
+	format = " %h-%d %H:%M ☰ "
+}

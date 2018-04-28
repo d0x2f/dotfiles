@@ -7,3 +7,4 @@ fundle plugin 'tuvistavie/fish-ssh-agent'
 
 fundle init
 
+set theme_color_scheme solarized-light
