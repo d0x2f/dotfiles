@@ -7,4 +7,9 @@ fundle plugin 'tuvistavie/fish-ssh-agent'
 
 fundle init
 
-set theme_color_scheme solarized-light
+set -g theme_color_scheme base16
+set -g theme_display_k8s_context yes
+set -g theme_display_date yes
+set -g theme_date_format "+%a %H:%M"
+set -g default_user dylan
+set -g theme_display_git yes

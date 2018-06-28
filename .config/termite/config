@@ -1,7 +1,14 @@
-
 [options]
+clickable_url = false
 font = Hack 12
+scrollback_lines = -1
+cursor_shape = ibeam
 
 [colors]
-foreground = #586e75
-background = #fdf6e3
+cursor = #e9cd13
+highlight = #264f78
+
+foreground = #d4d4d4
+background = #1e1e1e
+
+# vim: ft=dosini cms=#%s

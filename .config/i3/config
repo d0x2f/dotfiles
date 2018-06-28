@@ -1,10 +1,10 @@
 set $mod Mod4
-set $rofi "rofi -show run -font 'Hack 12' -bw 4"
+set $rofi "rofi -show run -font 'Hack 12' -bw 4 -theme ~/.config/rofi/dark-plus.rasi"
 
 font pango:hack 10
 focus_follows_mouse no
-default_border normal
-default_floating_border normal
+default_border pixel 2
+default_floating_border pixel 2
 
 floating_modifier $mod
 
@@ -85,11 +85,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $bg1 #eee8d5
-set $fg1 #586875
+set $bg1 #1e1e1e
+set $fg1 #d4d4d4
 
-set $bg2 #fdf6e3
-set $fg2 #586875
+set $bg2 #303030
+set $fg2 #c3c3c3
 
 client.focused          $bg1 $bg1 $fg1 $bg1 $bg1
 client.focused_inactive $bg1 $bg1 $fg1 $bg1 $bg1
@@ -106,19 +106,41 @@ bar {
     mode              dock
     workspace_buttons yes
     tray_output       primary
+    strip_workspace_numbers yes
 
     colors {
         background $bg1
         statusline $fg2
 
-        focused_workspace  $fg2 $bg2 $fg2
-        active_workspace   $fg2 $bg2 $fg2
-        inactive_workspace $fg1 $bg1 $fg1
-        urgent_workspace   $fg1 $bg1 $fg1
+        focused_workspace  $bg1 $bg2 $fg2
+        active_workspace   $bg1 $bg2 $fg2
+        inactive_workspace $bg2 $bg1 $fg1
+        urgent_workspace   $bg2 $bg1 $fg1
+    }
+}
+
+bar {
+    output            HDMI-0
+    status_command    i3status
+    position          bottom
+    mode              dock
+    workspace_buttons yes
+    tray_output       primary
+
+    colors {
+        background $bg1
+        statusline $fg2
+
+        focused_workspace  $bg1 $bg2 $fg2
+        active_workspace   $bg1 $bg2 $fg2
+        inactive_workspace $bg2 $bg1 $fg1
+        urgent_workspace   $bg2 $bg1 $fg1
     }
 }
 
 bindsym $mod+m bar mode toggle
+
+for_window [title="Calculator"] floating enable
 
 gaps inner 5
 gaps outer 10
@@ -127,4 +149,4 @@ exec --no-startup-id xmodmap ~/.Xmodmap
 exec --no-startup-id xrandr --output HDMI-0 --left-of DP-2
 exec --no-startup-id /usr/bin/compton
 exec --no-startup-id xfce4-clipman
-exec --no-startup-id hsetroot -solid '#fdf6e3'
+exec --no-startup-id hsetroot -solid '#1e1e1e'

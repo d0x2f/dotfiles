@@ -5,6 +5,10 @@
         "command": "workbench.action.terminal.focus"
     },
     {
+        "key": "ctrl+escape",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
         "key": "ctrl+r",
         "command": "workbench.action.gotoSymbol"
     }

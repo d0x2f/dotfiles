@@ -25,4 +25,14 @@
     "extensions.ignoreRecommendations": true,
     "files.trimTrailingWhitespace": true,
     "terminal.integrated.cursorStyle": "line",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.codeLens.scopes": [],
+    "gitlens.gitExplorer.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.hovers.currentLine.enabled": false,
+    "gitlens.historyExplorer.enabled": true,
+    "composer.executablePath": "/usr/bin/composer",
+    "workbench.editor.showTabs": true
 }
