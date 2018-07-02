@@ -8,6 +8,11 @@ default_floating_border pixel 2
 
 floating_modifier $mod
 
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
 bindsym $mod+Return exec termite
 bindsym $mod+Shift+q kill
 bindsym Mod3+space exec --no-startup-id $rofi
@@ -62,8 +67,8 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-bindsym $mod+Shift+greater move container to output right
-bindsym $mod+Shift+less move container to output left
+bindsym $mod+Shift+greater move container to output right; focus output right;
+bindsym $mod+Shift+less move container to output left; focus output left;
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
@@ -100,7 +105,7 @@ client.placeholder      $bg2 $bg2 $fg2 $bg2 $bg2
 client.background $bg1
 
 bar {
-    output            DP-2
+    output            DP1
     status_command    i3status
     position          bottom
     mode              dock
@@ -120,7 +125,7 @@ bar {
 }
 
 bar {
-    output            HDMI-0
+    output            DP2
     status_command    i3status
     position          bottom
     mode              dock
@@ -146,7 +151,7 @@ gaps inner 5
 gaps outer 10
 
 exec --no-startup-id xmodmap ~/.Xmodmap
-exec --no-startup-id xrandr --output HDMI-0 --left-of DP-2
+exec --no-startup-id xrandr --output DP1 --left-of DP2
 exec --no-startup-id /usr/bin/compton
 exec --no-startup-id xfce4-clipman
 exec --no-startup-id hsetroot -solid '#1e1e1e'
