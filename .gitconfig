@@ -1,0 +1,10 @@
+[user]
+	signingkey = 40237B33BBF627099E0285CBF5834257FAA5082A
+	name = Dylan McGannon
+	email = dylan@encapto.com
+[commit]
+    gpgsign = true
+[diff]
+    renameLimit = 2000
+[alias]
+	co = checkout
