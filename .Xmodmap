@@ -1,0 +1,7 @@
+clear lock
+clear mod3
+clear mod4
+keycode 66 = Hyper_L
+add mod3 = Super_L Super_R
+add mod4 = Hyper_L
+
