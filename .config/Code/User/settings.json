@@ -1,7 +1,6 @@
 {
     "window.zoomLevel": 0,
     "window.menuBarVisibility": "toggle",
-    "workbench.colorTheme": "Solarized Light",
     "editor.quickSuggestions": false,
     "editor.suggestOnTriggerCharacters": false,
     "editor.fontFamily": "Fira Code",
@@ -34,5 +33,16 @@
     "gitlens.hovers.currentLine.enabled": false,
     "gitlens.historyExplorer.enabled": true,
     "composer.executablePath": "/usr/bin/composer",
-    "workbench.editor.showTabs": true
+    "workbench.editor.showTabs": true,
+    "editor.hover.enabled": false,
+    "terminal.integrated.fontFamily": "Fira Code",
+    "window.title": "${dirty}${rootName}${separator}Code",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "[javascript]": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": false,
+    },
+    "[json]": {
+        "editor.tabSize": 2
+    }
 }

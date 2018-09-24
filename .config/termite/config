@@ -1,7 +1,7 @@
 [options]
 clickable_url = false
 font = Hack 12
-scrollback_lines = -1
+scrollback_lines = 2000
 cursor_shape = ibeam
 
 [colors]

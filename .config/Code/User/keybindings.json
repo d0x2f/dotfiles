@@ -11,5 +11,9 @@
     {
         "key": "ctrl+r",
         "command": "workbench.action.gotoSymbol"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "-workbench.action.files.openFile"
     }
 ]

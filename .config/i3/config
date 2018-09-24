@@ -16,7 +16,8 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+Return exec termite
 bindsym $mod+Shift+q kill
 bindsym Mod3+space exec --no-startup-id $rofi
-bindsym $mod+c exec com.github.ronnydo.colorpicker
+bindsym $mod+c exec gcolor2
+bindsym $mod+d exec gedit ~/Documents/todo.md
 
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -73,10 +74,10 @@ bindsym $mod+Shift+less move container to output left; focus output left;
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Pause exec "i3lock-fancy; systemctl suspend;"
+bindsym $mod+Pause exec "i3lock-fancy-dualmonitor; systemctl suspend;"
 
-bindsym --release  Print exec gnome-screenshot -ac
-bindsym Pause exec --no-startup-id i3lock-fancy
+bindsym --release Print exec gnome-screenshot -ac
+bindsym Pause exec --no-startup-id i3lock-fancy-dualmonitor
 
 mode "resize" {
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -96,9 +97,9 @@ set $fg1 #d4d4d4
 set $bg2 #303030
 set $fg2 #c3c3c3
 
-client.focused          $bg1 $bg1 $fg1 $bg1 $bg1
+client.focused          $fg1 $bg2 $fg1 $bg2 $bg2
 client.focused_inactive $bg1 $bg1 $fg1 $bg1 $bg1
-client.unfocused        $bg2 $bg2 $fg2 $bg2 $bg2
+client.unfocused        $bg1 $bg2 $fg2 $bg2 $bg2
 client.urgent           $bg2 $bg2 $fg2 $bg2 $bg2
 client.placeholder      $bg2 $bg2 $fg2 $bg2 $bg2
 
@@ -155,3 +156,4 @@ exec --no-startup-id xrandr --output DP1 --left-of DP2
 exec --no-startup-id /usr/bin/compton
 exec --no-startup-id xfce4-clipman
 exec --no-startup-id hsetroot -solid '#1e1e1e'
+#exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/lines.png
